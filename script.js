@@ -2,7 +2,7 @@ AWS.config.region = "us-east-2"; // Region
 
 // Initialize the Amazon Cognito credentials provider
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-    IdentityPoolId: "us-east-2:944991fe-ca60-479b-bab3-7d5f2f58799f",
+    IdentityPoolId: "us-east-2:e43e6f76-cee7-4e47-810a-a0a64e34fd82",
 });
 
 function uploadFile(file) {
@@ -20,7 +20,7 @@ function uploadFile(file) {
 
         const upload = new AWS.S3.ManagedUpload({
             params: {
-                Bucket: "ebike-s3",
+                Bucket: "midterm-image-repo",
                 Key: file.name,
                 Body: file, 
                 ContentType: file.type,
