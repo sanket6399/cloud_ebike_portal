@@ -2,7 +2,7 @@ AWS.config.region = "us-east-2"; // Region
 
 // Initialize the Amazon Cognito credentials provider
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-    IdentityPoolId: "us-east-2:e43e6f76-cee7-4e47-810a-a0a64e34fd82",
+    IdentityPoolId: "us-east-2:50dd8e7a-d441-4969-9199-e737c1bd3f69",
 });
 
 function uploadFile(file) {
