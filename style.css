@@ -5,15 +5,54 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-color: #f4f4f4; /* Light grey background */
 }
 
 .upload-container {
     text-align: center;
     border: 1px solid #ccc;
-    padding: 20px;
+    padding: 40px;
     border-radius: 8px;
+    background-color: white; /* White background for the container */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Adding a subtle shadow for depth */
+    width: 400px; /* Set a fixed width */
 }
 
 input[type="file"] {
+    margin: 20px 0;
+    padding: 10px;
+    border: 2px solid #007bff; /* Blue border */
+    border-radius: 4px;
+    font-size: 16px;
+    color: #007bff; /* Blue text */
+    background-color: #fff; /* White background */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+button {
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Blue background */
+    color: #ffffff; /* White text */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+h2 {
+    color: #333; /* Dark grey color for the heading */
     margin-bottom: 20px;
+}
+
+/* Additional styles for aesthetics */
+img#previewImage {
+    max-width: 100%; /* Make sure the image is responsive */
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px; /* Rounded corners for the image */
 }

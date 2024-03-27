@@ -6,6 +6,13 @@ AWS.config.credentials = new AWS.CognitoIdentityCredentials({
 });
 
 function uploadFile(file) {
+    // Check if the file type is allowed
+    if (file.type !== "image/png" && file.type !== "image/jpeg") {
+        console.log("Error: Only PNG and JPEG files are allowed.");
+        alert("Error: Only PNG and JPEG files are allowed.");
+        return; // Stop the function execution if file is not allowed
+    }
+
     AWS.config.credentials.get(function(err) {
         if (err) {
             console.log("Error retrieving credentials: ", err);
@@ -41,6 +48,7 @@ function uploadFile(file) {
         );
     });
 }
+
 
 document.getElementById("uploadForm").addEventListener("submit", function(event) {
     event.preventDefault();
