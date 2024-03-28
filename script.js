@@ -40,7 +40,7 @@ function uploadFile(file) {
             function(data) {
                 console.log("Successfully uploaded photo to S3 bucket.");
                 alert("Wohooo! Successfully uploaded photo to S3 bucket. GO GREEN!");
-                windwos.location.reload();
+                windows.location.reload();
             },
             function(err) {
                 console.log("There was an error uploading your photo in the bucket: ", err.message);
