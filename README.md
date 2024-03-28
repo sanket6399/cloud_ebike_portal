@@ -4,6 +4,8 @@
 
 This project consists of a static website hosted on AWS, which allows users to upload images to an S3 bucket. Upon upload, an AWS Lambda function is triggered to extract image metadata and store it in a DynamoDB table. The application is built using AWS Amplify, with AWS Cognito for authentication and Amazon CloudWatch for logging.
 
+## Architecture Diagram
+![Alt text](https://drive.google.com/file/d/1A5MFjcePI-Mbiba6Rw7HMBpsWzYcH5TK/view?usp=drive_link)
 ## Architecture Description
 
 The application integrates several AWS services to provide a seamless image upload and metadata storage experience:
