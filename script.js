@@ -15,7 +15,7 @@ function uploadFile(file) {
 
     AWS.config.credentials.get(function(err) {
         if (err) {
-            console.log("Error retrieving credentials: ", err);
+            console.log("There was an Error retrieving credentials: ", err);
             return;
         }
 
@@ -38,11 +38,11 @@ function uploadFile(file) {
 
         promise.then(
             function(data) {
-                console.log("Successfully uploaded photo.");
-                alert("Successfully uploaded photo.");
+                console.log("Successfully uploaded photo to S3 bucket.");
+                alert("Wohooo! Successfully uploaded photo to S3 bucket. GO GREEN!");
             },
             function(err) {
-                console.log("There was an error uploading your photo: ", err.message);
+                console.log("There was an error uploading your photo in the bucket: ", err.message);
                 alert("There was an error uploading your photo: " + err.message);
             }
         );
@@ -58,3 +58,5 @@ document.getElementById("uploadForm").addEventListener("submit", function(event)
         uploadFile(file);
     }
 });
+
+module.exports = { uploadFile }; // Export the uploadFile function for testing
